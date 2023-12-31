@@ -4,7 +4,7 @@
 
 pub const Move = struct {
     index: u8,
-    kind: []const u8, // kind instead of type because type is a keyword
+    typIndex: u8, // kind instead of type because type is a keyword
 
     physical: bool,
     special: bool,
@@ -27,4 +27,6 @@ pub const Move = struct {
 
     // review this usage against battle logic with chatgpt
     uniqueEffectIndices: []const u8,
+
+    isSoundBased: bool,
 };
